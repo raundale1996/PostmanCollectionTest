@@ -1,0 +1,29 @@
+Test case api 
+------------
+
+url- https://reqres.in/api/user?page=2
+
+>> The first test case is to check for the response code of api.
+The pass condition for the test case should be 200(response code).
+
+Code-:test["check for response code"] = responseCode.code==200;
+
+>>The second test case is to validate forany key or value as ::-Michael
+
+Code:-test["String Match"]= responseBody.has("Michael");
+
+>>The third test case is to validate for a value of key id as 8 for Lindsay from JSON response.
+
+Code:-var jsonRes= JSON.parse(responseBody);
+      tests["Check for id of lindsay"]= jsonReq.data[1].id==8;
+
+>>The fourth test case is checking for the value of key "last_name" of michael as "Lawson" form JSON response.
+
+code::-test["check micheal's lastname as Lawson"]=jsonReq.data[0].last_name=="Lawson";
+
+
+outh2.0
+data paypal
+client id=AWd3eaL4ZdwyMq7rjbWVGggp37gC7KyG60LpoJrY5cW7-B_8EX1P1C98bX_TZuy3_vex3mBIptgQBask
+
+secret:EN2-zKLcUg_LXfX3bmLPB1f-ZMR1_oliSrB41IX1l4jAPtnr7pCFlKaXlAsIXcf6zkAbmYrRXOAe-z2L
